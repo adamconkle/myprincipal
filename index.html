@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laura's PrinciPAL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>Laura's PrinciPAL - Jesus loves you!</h2>
+    <button id="addButton" onclick="addItem()"> + </button>
+  </header>
+  
+  <main>
+    <ul id="todo-list"></ul>
+  </main>
+
+  <div id="edit-modal" class="modal hidden">
+      <div class="modal-content">
+        <input id="edit-text" placeholder="Enter task...">
+        <select id="edit-category"></select>
+        <input type="date" id="edit-due-date">
+        <div class="modal-buttons">
+          <button onclick="saveEdit()">Save</button>
+          <button onclick="closeModal()">Cancel</button>
+        </div>
+      </div>
+  </div>
+  
+  <footer>
+    <button onclick="showSection('all')">To-Do</button>
+    <button onclick="showSection('completed')">Completed</button>
+    <button onclick="showSection('archived')">Archived</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
